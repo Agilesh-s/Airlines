@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Trips</th>
+                        <th scope="col">Airline ID</th>
+                        <th scope="col">Airline Name</th>
+                        <th scope="col">Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of passengersList.data">
+                        <td>{{i._id}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.trips}}</td>
+                        <td>{{i.airline[0].id}}</td>
+                        <td>{{i.airline[0].name}}</td>
+                        <td>{{i.airline[0].country}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
